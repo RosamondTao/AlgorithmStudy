@@ -27,3 +27,16 @@ public void backtrack(路径,选择列表){
 }
 ```
 
+
+
+
+
+### 去重
+
+题目示例：（4）组合总和2（5）全排列2
+
+为方便去重，一般有两步重要代码。
+
+1、排列：`Arrays.sort(candidates)`
+
+2、剪枝：`if(i!=index && candidates[i-1]==candidates[i]) continue; `or`if(i!=0 && candidates[i]==candidates[i-1] && used[i-1]) continue;`
